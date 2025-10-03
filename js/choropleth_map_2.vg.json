@@ -5,7 +5,7 @@
   "height": 400,
   "projection": {"type": "equalEarth"},
   "data": {
-    "url": "https://raw.githubusercontent.com/kluk0007/Monash_FIT3179_Homework_Week_10/refs/heads/main/js/ne_110m_admin_0_countries_cropped.topojson",
+    "url": "https://raw.githubusercontent.com/kluk0007/Monash_FIT3179_Homework_Week_10/refs/heads/main/js/ne_110m_admin_0_countries_australia.topojson",
     "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
   },
   "transform": [
