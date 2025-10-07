@@ -1,12 +1,17 @@
 {
   "height": {"step": 17},
   "data": { "url": "https://raw.githubusercontent.com/kluk0007/Monash_FIT3179_Homework_Week_10/refs/heads/main/data/wrangled_overseas_migrant_arrivals_age_and_sex.csv"},
+  "transform": [{"fold":["2018_19_Males", "2018_19_Females", "2022_23_Males", "2022_23_Females", "2023_24_Males", "2023_24_Females"], "as":["age_gender_time", "count"]},
+  {"calculate": "datum.Age + ' | ' + datum.age_gender_time", "as":"combined"}],
   "mark": "bar",
   "encoding": {
-    "x": {"field": "Age", "sort": "null"},
+    "x": {"field": "combined", "type": "nominal", "sort": "null", "axis": {"labelAngle": -45}},
     "y": {
-      "aggregate": "sum", "field": "2018_19_Males",
+      "field": "count", "type": "quantitative",
       "title": "population"
     }
+  },
+  "color": {
+    "field":"Age", "type": "quantitative", "scale":{"scheme": ["blues"]}
   }
 }
