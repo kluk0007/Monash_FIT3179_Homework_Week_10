@@ -8,10 +8,10 @@
     "x": {"field": "combined", "type": "nominal", "sort": "null", "axis": {"labelAngle": -45}},
     "y": {
       "field": "count", "type": "quantitative",
-      "title": "population"
-    }
+      "title": "population",
+    },
+    "tooltip":{"field": "count", "type": "quantitative"}
   },
   "color": {
-    "field":"Age", "type": "quantitative", "scale":{"scheme": ["blues"]}
-  }
+    "field":"Age", "type": "nominal"}
 }
