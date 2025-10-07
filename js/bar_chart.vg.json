@@ -3,9 +3,9 @@
   "data": { "url": "https://raw.githubusercontent.com/kluk0007/Monash_FIT3179_Homework_Week_10/refs/heads/main/data/wrangled_overseas_migrant_arrivals_age_and_sex.csv"},
   "mark": "bar",
   "encoding": {
-    "y": {"field": "age"},
-    "x": {
-      "aggregate": "sum", "field": "people",
+    "x": {"field": "Age", "sort": "null"},
+    "y": {
+      "aggregate": "sum", "field": "2018_19_Males",
       "title": "population"
     }
   }
