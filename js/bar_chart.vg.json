@@ -1,6 +1,28 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": { "url": "https://raw.githubusercontent.com/kluk0007/Monash_FIT3179_Homework_Week_10/refs/heads/main/data/overseas_migrant_arrivals_age_and_sex.csv" },
+  "params": [
+    {
+      "name": "selectedYear",
+      "value": "2018-19",
+      "bind": {
+        "input": "select",
+        "options": ["2018-2019", "2022-2023", "2023-2024"],
+        "labels": ["2018–2019", "2022-2023", "2023-2024"],
+        "name": "Select Year: "
+      }
+    },
+    {
+      "name": "selectedGender",
+      "value": "Males",
+      "bind": {
+        "input": "select",
+        "options": ["Males", "Females"],
+        "labels": ["Males", "Females"],
+        "name": "Select Gender: "
+      }
+    }
+  ],
   "transform": [
     {
       "calculate": "datum.Age == '100+' ? 100 : toNumber(datum.Age)",
@@ -9,6 +31,10 @@
     {
       "calculate": "datum.AgeNum >= 100 ? '100+' : (floor(datum.AgeNum / 10) * 10 + '-' + (floor(datum.AgeNum / 10) * 10 + 9))",
       "as": "AgeGroup"
+    },
+    {
+      "fold": ["2018-19 Males", "2018-19 Females", "2022-23 Males", "2022-23 Females", "2023-24 Males", "2023-24 Females"],
+      "as": ["Category", "Count"]
     }
   ],
   "mark": "bar",
@@ -24,7 +50,7 @@
     },
     "y": {
       "aggregate": "sum",
-      "field": "2018-19 - Males",
+      "field": "Count",
       "title": "Population"
     }
   }
