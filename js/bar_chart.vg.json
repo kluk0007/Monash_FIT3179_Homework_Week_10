@@ -36,9 +36,6 @@
       "fold": ["2018-2019 Males Thousand", "2018-2019 Females Thousand", "2022-2023 Males Thousand", "2022-2023 Females Thousand", "2023-2024 Males Thousand", "2023-2024 Females Thousand"],
       "as": ["Category", "Count"]
     },
-        {
-      "calculate": "datum.Count * 1000", "as": "Count_1000"
-    },
     {
       "calculate": "trim(split(datum.Category, ' ')[0])", "as": "Year"
   },
@@ -63,14 +60,14 @@
     },
     "y": {
       "aggregate": "sum",
-      "field": "Count_1000",
+      "field": "Count",
       "title": "Overseas Migrant Arrivals",
-      "scale": {"domain": [0, 160000]}
+      "scale": {"domain": [0, 200]}
     },
     "tooltip": [
-      {"aggregate": "sum", "field": "Count_1000", "type": "quantitative", "format": ",.0f", "title": "Overseas Migrant Arrivals"},
-      {"field": "Gender", "type": "nominal", "title": "Gender"}, {"field": "AgeGroup", "type": "ordinal", "title": "Age Group"},
-      {"field": "Year", "type": "ordinal", "title": "Years"}],
+      {"aggregate": "sum", "field": "Count", "type": "quantitative", "format": "", "title": "<b>Overseas Migrant Arrivals (Thousand People)</b>"},
+      {"field": "Gender", "type": "nominal", "title": "<b>Gender</b>"}, {"field": "AgeGroup", "type": "ordinal", "title": "Age Group (Years Old)"},
+      {"field": "Year", "type": "ordinal", "title": "<b>Year Period</b>"}],
     "color": {"field": "Gender", "type": "nominal", "scale": {"domain": ["Males", "Females"], "range": ["#156ab0", "#f58d05"]}}
   }
 }
