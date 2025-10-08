@@ -4,15 +4,15 @@
   "mark": "bar",
   "encoding": {
     "x": {
-      "field": "Age",
-      "type": "ordinal",
-      "title": "Age Groups",
-      "axis": {"labelAngle": -60}
+      "field": "Age"
     },
     "y": {
-      "aggregate": "count",
+      "aggregate": "sum",
       "field": "2018-2019 Males Thousand",
-      "title": "Overseas Migrant Arrivals"
-    }
+      "type": "quantitative",
+      "title": "Overseas Migrant Arrivals",
+      "scale": {"domain":[0,20]}
+    },
+    "tooltip": {"field": "2018-2019 Males Thousand"}
   }
 }
