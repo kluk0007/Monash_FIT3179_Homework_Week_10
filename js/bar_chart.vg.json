@@ -1,21 +1,12 @@
 {
   "height": {"step": 17},
-  "data": { "url": "https://raw.githubusercontent.com/kluk0007/Monash_FIT3179_Homework_Week_10/refs/heads/main/data/wrangled_overseas_migrant_arrivals_age_and_sex.csv"},
-  "transform": [{"fold":["2018-2019 Males", "2018-2019 Females", "2022-2023 Males", "2022-2023 Females", "2023-2024 Males", "2023-2024 Females"], "as":["age_gender_time", "count"]},
-  {"calculate": "datum.Age + ' | ' + datum.age_gender_time", "as":"combined"}],
+  "data": { "url": "https://raw.githubusercontent.com/kluk0007/Monash_FIT3179_Homework_Week_10/refs/heads/main/data/overseas_migrant_arrivals_age_and_sex.csv"},
   "mark": "bar",
   "encoding": {
     "x": {"field": "combined", "type": "nominal", "sort": "null", "axis": {"labelAngle": -45}},
     "y": {
       "field": "count", "type": "quantitative",
       "title": "population",
-    },
-    "tooltip":[
-      {"field": "age_gender_time", "type": "nominal", "title": "Year and Gender: "},
-      {"field": "Age", "type": "nominal", "title": "Age: "},
-      {"field": "count", "type": "quantitative", "title": "Population:"}
-    ]
-  },
-  "color": {
-    "field":"Age", "type": "nominal"}
+    }
+  }
 }
