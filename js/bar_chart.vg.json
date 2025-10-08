@@ -7,7 +7,7 @@
       "value": "2018-19",
       "bind": {
         "input": "select",
-        "options": ["2018-19", "2022-23", "2023-24"],
+        "options": ["2018-2019", "2022-2023", "2023-2024"],
         "labels": ["2018–2019", "2022-2023", "2023-2024"],
         "name": "Select Year: "
       }
@@ -64,8 +64,12 @@
     "y": {
       "aggregate": "sum",
       "field": "Count_1000",
-      "title": "Overseas Migrant Arrivals"
+      "title": "Overseas Migrant Arrivals",
+      "scale": {"domain": [0, 160000]}
     },
-    "tooltip": [{"field": "AgeGroup", "type": "ordinal", "title": "Age Group"}, {"aggregate": "sum", "field": "Count_1000", "type": "quantitative", "title": "Overseas Migrant Arrivals"}]
+    "tooltip": [
+      {"field": "Gender", "type": "nominal", "title": "Gender"}, {"field": "AgeGroup", "type": "ordinal", "title": "Age Group"},
+      {"field": "Year", "type": "ordinal", "title": "Years"}, {"aggregate": "sum", "field": "Count_1000", "type": "quantitative", "title": "Overseas Migrant Arrivals"}],
+    "color": {"field": "Gender", "type": "nominal", "scale": {"domain": ["Males", "Females"], "range": ["#156ab0", "#f58d05"]}}
   },
 }
