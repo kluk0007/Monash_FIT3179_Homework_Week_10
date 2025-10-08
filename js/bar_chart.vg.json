@@ -33,7 +33,7 @@
       "as": "AgeGroup"
     },
     {
-      "fold": ["2018-2019 Males", "2018-2019 Females", "2022-2023 Males", "2022-2023 Females", "2023-2024 Males", "2023-2024 Females"],
+      "fold": ["2018-2019 Males Thousand", "2018-2019 Females Thousand", "2022-2023 Males Thousand", "2022-2023 Females Thousand", "2023-2024 Males Thousand", "2023-2024 Females Thousand"],
       "as": ["Category", "Count"]
     },
         {
