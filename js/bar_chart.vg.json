@@ -72,5 +72,5 @@
       {"field": "Gender", "type": "nominal", "title": "Gender"}, {"field": "AgeGroup", "type": "ordinal", "title": "Age Group"},
       {"field": "Year", "type": "ordinal", "title": "Years"}],
     "color": {"field": "Gender", "type": "nominal", "scale": {"domain": ["Males", "Females"], "range": ["#156ab0", "#f58d05"]}}
-  },
+  }
 }
