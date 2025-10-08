@@ -1,1 +1,18 @@
-
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": { "url": "https://raw.githubusercontent.com/kluk0007/Monash_FIT3179_Homework_Week_10/refs/heads/main/data/overseas_migrant_arrivals_age_and_sex.csv" },
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Age",
+      "type": "ordinal",
+      "title": "Age Groups",
+      "axis": {"labelAngle": -60}
+    },
+    "y": {
+      "aggregate": "count",
+      "field": "2018-2019 Males Thousands",
+      "title": "Overseas Migrant Arrivals"
+    }
+  }
+}
