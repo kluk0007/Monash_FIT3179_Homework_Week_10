@@ -11,7 +11,7 @@
     },
     "y": {
       "aggregate": "count",
-      "field": "2018-2019 Males Thousands",
+      "field": "2018-2019 Males Thousand",
       "title": "Overseas Migrant Arrivals"
     }
   }
