@@ -7,7 +7,7 @@
       "value": "2018-19",
       "bind": {
         "input": "select",
-        "options": ["2018-2019", "2022-2023", "2023-2024"],
+        "options": ["2018-19", "2022-23", "2023-24"],
         "labels": ["2018–2019", "2022-2023", "2023-2024"],
         "name": "Select Year: "
       }
@@ -36,27 +36,36 @@
       "fold": ["2018-19 Males", "2018-19 Females", "2022-23 Males", "2022-23 Females", "2023-24 Males", "2023-24 Females"],
       "as": ["Category", "Count"]
     },
-    { "calculate": "trim(split(datum.Category, ' ')[0])", "as": "Year" },
-{ "calculate": "trim(split(datum.Category, ' ')[1])", "as": "Gender" },
-{
-  "filter": "datum.Year == selectedYear && datum.Gender == selectedGender"
-}
+        {
+      "calculate": "datum.Count * 1000", "as": "Count_1000"
+    },
+    {
+      "calculate": "trim(split(datum.Category, ' ')[0])", "as": "Year"
+  },
+  { 
+      "calculate": "trim(split(datum.Category, ' ')[1])", "as": "Gender"
+  },
+  {
+    "filter": "datum.Year == selectedYear && datum.Gender == selectedGender"
+  }
   ],
   "mark": "bar",
   "encoding": {
     "x": {
       "field": "AgeGroup",
       "type": "ordinal",
-      "title": "Age Group",
+      "title": "Age Groups",
       "sort": [
         "0-9", "10-19", "20-29", "30-39", "40-49",
         "50-59", "60-69", "70-79", "80-89", "90-99", "100+"
-      ]
+      ],
+      "axis": {"labelAngle": -60}
     },
     "y": {
       "aggregate": "sum",
-      "field": "Count",
-      "title": "Population"
-    }
-  }
+      "field": "Count_1000",
+      "title": "Overseas Migrant Arrivals"
+    },
+    "tooltip": [{"field": "AgeGroup", "type": "ordinal", "title": "Age Group"}, {"aggregate": "sum", "field": "Count_1000", "type": "quantitative", "title": "Overseas Migrant Arrivals"}]
+  },
 }
