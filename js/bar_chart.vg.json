@@ -4,7 +4,7 @@
   "params": [
     {
       "name": "selectedYear",
-      "value": "2018-19",
+      "value": "2018-2019",
       "bind": {
         "input": "select",
         "options": ["2018-2019", "2022-2023", "2023-2024"],
@@ -33,7 +33,7 @@
       "as": "AgeGroup"
     },
     {
-      "fold": ["2018-19 Males", "2018-19 Females", "2022-23 Males", "2022-23 Females", "2023-24 Males", "2023-24 Females"],
+      "fold": ["2018-2019 Males", "2018-2019 Females", "2022-2023 Males", "2022-2023 Females", "2023-2024 Males", "2023-2024 Females"],
       "as": ["Category", "Count"]
     },
         {
