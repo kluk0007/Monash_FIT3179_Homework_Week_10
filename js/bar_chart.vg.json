@@ -1,5 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 500,
   "data": { "url": "https://raw.githubusercontent.com/kluk0007/Monash_FIT3179_Homework_Week_10/refs/heads/main/data/overseas_migrant_arrivals_age_and_sex.csv" },
   "params": [
     {
