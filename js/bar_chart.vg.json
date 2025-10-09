@@ -71,6 +71,9 @@
       {"aggregate": "sum", "field": "Count", "type": "quantitative", "format": "", "title": "Overseas Migrant Arrivals (Thousand People)"},
       {"field": "Gender", "type": "nominal", "title": "Sex"}, {"field": "AgeGroup", "type": "ordinal", "title": "Age Group (Years Old)"},
       {"field": "Year", "type": "ordinal", "title": "Year Period"}],
-    "color": {"field": "Gender", "type": "nominal", "scale": {"domain": ["Males", "Females"], "range": ["#156ab0", "#f58d05"]}}
+    "color": {"field": "Gender", "type": "nominal", "scale": {"domain": ["Males", "Females"], "range": ["#156ab0", "#f58d05"]}, "legend": {
+        "title": "Sex"}
+      }
+    }
   }
 }
