@@ -73,7 +73,6 @@
       {"field": "Year", "type": "ordinal", "title": "Year Period"}],
     "color": {"field": "Gender", "type": "nominal", "scale": {"domain": ["Males", "Females"], "range": ["#156ab0", "#f58d05"]}, "legend": {
         "title": "Sex"}
-      }
     }
   }
 }
