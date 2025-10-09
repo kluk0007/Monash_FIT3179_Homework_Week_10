@@ -27,11 +27,11 @@
       "condition": { "test": "datum.population_percentage !== 0",
       "field": "Australian_population_percentage",
       "type": "quantitative",
-      "scale": {"type": "symlog", "constant": 0.1, "domain": [0, 100], "range": ["#dddddd", "#004191"]}
-      }, "value": "lightgray",
+      "scale": {"type": "symlog", "constant": 0.1, "domain": [0, 100], "range": ["#dddddd", "#004191"]},
       "legend": {
         "title": "Australian Population Percentage"
-      }
+      }}, 
+      "value": "lightgray"
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "Country"},
