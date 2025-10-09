@@ -28,11 +28,14 @@
       "field": "Australian_population_percentage",
       "type": "quantitative",
       "scale": {"type": "symlog", "constant": 0.1, "domain": [0, 100], "range": ["#dddddd", "#004191"]}
-    }, "value": "lightgray"
+      }, "value": "lightgray",
+      "legend": {
+        "title": "Australian Population Percentage"
+      }
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "Country"},
-      {"field": "Australian_population_percentage", "type": "quantitative"}
+      {"field": "Australian_population_percentage", "type": "quantitative", "title": "Population Percentage"}
     ]
   }
 }
