@@ -65,9 +65,9 @@
       "scale": {"domain": [0, 200]}
     },
     "tooltip": [
-      {"aggregate": "sum", "field": "Count", "type": "quantitative", "format": "", "title": "<b>Overseas Migrant Arrivals (Thousand People)</b>"},
-      {"field": "Gender", "type": "nominal", "title": "<b>Gender</b>"}, {"field": "AgeGroup", "type": "ordinal", "title": "Age Group (Years Old)"},
-      {"field": "Year", "type": "ordinal", "title": "<b>Year Period</b>"}],
+      {"aggregate": "sum", "field": "Count", "type": "quantitative", "format": "", "title": "Overseas Migrant Arrivals (Thousand People)"},
+      {"field": "Gender", "type": "nominal", "title": "Gender"}, {"field": "AgeGroup", "type": "ordinal", "title": "Age Group (Years Old)"},
+      {"field": "Year", "type": "ordinal", "title": "Year Period"}],
     "color": {"field": "Gender", "type": "nominal", "scale": {"domain": ["Males", "Females"], "range": ["#156ab0", "#f58d05"]}}
   }
 }
