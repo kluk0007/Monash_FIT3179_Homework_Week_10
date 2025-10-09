@@ -62,7 +62,7 @@
       "aggregate": "sum",
       "field": "Count",
       "title": "Overseas Migrant Arrivals",
-      "scale": {"domain": [0, 200]}
+      "scale": {"domain": [0, 180]}
     },
     "tooltip": [
       {"aggregate": "sum", "field": "Count", "type": "quantitative", "format": "", "title": "Overseas Migrant Arrivals (Thousand People)"},
