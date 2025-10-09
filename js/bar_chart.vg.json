@@ -22,7 +22,7 @@
         "input": "select",
         "options": ["Males", "Females"],
         "labels": ["Males", "Females"],
-        "name": "Select Gender: "
+        "name": "Select Sex: "
       }
     }
   ],
@@ -68,7 +68,7 @@
     },
     "tooltip": [
       {"aggregate": "sum", "field": "Count", "type": "quantitative", "format": "", "title": "Overseas Migrant Arrivals (Thousand People)"},
-      {"field": "Gender", "type": "nominal", "title": "Gender"}, {"field": "AgeGroup", "type": "ordinal", "title": "Age Group (Years Old)"},
+      {"field": "Gender", "type": "nominal", "title": "Sex"}, {"field": "AgeGroup", "type": "ordinal", "title": "Age Group (Years Old)"},
       {"field": "Year", "type": "ordinal", "title": "Year Period"}],
     "color": {"field": "Gender", "type": "nominal", "scale": {"domain": ["Males", "Females"], "range": ["#156ab0", "#f58d05"]}}
   }
