@@ -25,7 +25,19 @@
 
   <script type="text/javascript">
     var vg_1 = "js/bar_chart.vg.json";
-    vegaEmbed("#bar_chart", vg_1).then(function(result) {
+    vegaEmbed("#bar_chart", vg_1, {
+      tooltip: {
+        renderer: (handler, event, item, value) => {
+          if (!value) return;
+
+          const html = value.map(d => {
+            return '<div><strong>${d.title}</strong>: ${d.value}</div>';
+          }).join('');
+
+          handler.html(html);
+        }
+      }
+    }).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
                                        
